@@ -1,0 +1,56 @@
+body {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: "Consolas", "Courier New", monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#console-container {
+    width: 100%;
+    max-width: 700px;
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    background-image: url(logo_fundo_preto.png);
+    background-size: cover;
+    color: #008100;
+    font-size: 20px;
+    font-style: bold;
+    background-position: center;
+}
+
+#output {
+    white-space: pre-wrap;
+    height: 480px;
+    overflow-y: auto;
+    padding-bottom: 8px;
+    line-height: 1.4;
+    border: 1px solid #333;
+}
+
+#input-line {
+    display: flex;
+    border-top: 1px solid #333;
+    padding-top: 8px;
+    
+}
+
+#prompt-symbol {
+    color: #000000;
+    margin-right: 8px;
+}
+
+#cmd-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #d4d4d4;
+    font-family: inherit;
+    font-size: 14px;
+}
