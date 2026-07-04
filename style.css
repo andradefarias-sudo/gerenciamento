@@ -16,9 +16,9 @@ body {
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    background-image: url(logo_fundo_preto.png);
+    background-image: url(IMAGEM.jpg);
     background-size: cover;
-    color: #008100;
+    color: #000000;
     font-size: 20px;
     font-style: bold;
     background-position: center;
@@ -37,7 +37,6 @@ body {
     display: flex;
     border-top: 1px solid #333;
     padding-top: 8px;
-    
 }
 
 #prompt-symbol {
@@ -53,4 +52,58 @@ body {
     color: #d4d4d4;
     font-family: inherit;
     font-size: 14px;
+}
+
+/* ===== Ajustes para iPhone 14 Plus e celulares em geral ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+        align-items: flex-start;
+    }
+
+    #console-container {
+        max-width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        /* evita zoom/deform da imagem de fundo em telas estreitas */
+        background-size: cover;
+        background-position: center;
+    }
+
+    #output {
+        height: calc(100vh - 160px); /* ocupa quase toda a tela disponível */
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #input-line {
+        padding-top: 6px;
+    }
+
+    #cmd-input {
+        font-size: 16px; /* evita que o Safari dê zoom automático ao focar o input */
+        padding: 4px 0;
+    }
+
+    #prompt-symbol {
+        margin-right: 6px;
+    }
+}
+
+/* Ajuste extra para telas bem pequenas (iPhone SE etc.) */
+@media (max-width: 375px) {
+    #output {
+        height: calc(100vh - 140px);
+        font-size: 13px;
+    }
+}
+
+/* Suporte à área "segura" (notch/home indicator) em iPhones */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
 }
